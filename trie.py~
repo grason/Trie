@@ -66,6 +66,9 @@ for p in k:
 #pass only significant bits, end everything else
     
    
+def foo(num)
+    for i in range(0,31,2)
+        ander = math.pow(2,i)+math.pow(2,i+1)
         
     
     
