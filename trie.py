@@ -61,6 +61,11 @@ class Node:
                 self.__nodes[head] = Node()
             return self.__nodes[head].__get(tail)
         return self
+    def getNode(self, array):
+        if array:
+            head, *tail = array
+            return self.__nodes[head].__get(tail)
+        return self
     def __search(self, array,last_d):
         last_data = last_d
 
