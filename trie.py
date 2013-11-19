@@ -30,7 +30,18 @@ class Node:
         
     def update(self, addr):
         self[addr].__final = True
-        
+    def contains(self, array):
+        if array:
+            head, *tail = array
+            if head in self.__nodes:
+                return self.__nodes[head].contains(tail)
+            else:
+                return False
+        if self.__data:
+            return True
+        else:
+            return False
+    
     def delete(self, addr):
         self[addr].__final = False
     def getData(self):
@@ -52,6 +63,7 @@ class Node:
         return self
     def __search(self, array,last_d):
         last_data = last_d
+
         if self.__data:
             last_data= self.getData();
             print("**",self.getData())
@@ -88,6 +100,10 @@ print("-->",i[[1,1,0,1,1]])
 print("-->",i[[3]])
 print("-->",i[[1,1,0,1,1,1]])
 print("-->",i[[1,1,0,0,1,1,1]])
+if i.contains([1]):
+    print("yes")
+else:
+    print("no")
 #pass only significant bits, end everything else
     
    

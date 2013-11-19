@@ -1,4 +1,5 @@
 import math
+import trie.py
 def foo(num):
     for i in range(30,-1,-2):
         ander = int(math.pow(2,i)+math.pow(2,i+1))
